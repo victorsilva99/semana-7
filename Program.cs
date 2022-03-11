@@ -27,13 +27,11 @@ namespace Exercicio
                 CPF = 99999999,
                 Email = "edu@gmail.com",
                 Endereco = "Rua do Cobre, 768",
-                NomeDoDono = ""
+                NomeDoDono = "Edu"
             });
 
-            if (mensagemCachorro == "Cachorro cadastrado com sucesso!")
-                Console.WriteLine($"O cadastro do cachorro {dadosCachorro.Nome} foi realizado com sucesso!");
-            else
-                Console.WriteLine(mensagemCachorro);
+            // Mensagem de retorno sobre o cadastro
+            Console.WriteLine(mensagemCachorro);
 
             // Adição do gato
             var dadosGato = new CadastroGato();
@@ -47,13 +45,11 @@ namespace Exercicio
                 CPF = 88888888,
                 Email = "carlos@gmail.com",
                 Endereco = "Rua da Prata, 55",
-                NomeDoDono = ""
+                NomeDoDono = "Carlos"
             });
 
-            if (mensagemGato == "Gato cadastrado com sucesso!")
-                Console.WriteLine($"O cadastro do gato {dadosGato.Nome} foi realizado com sucesso!");
-            else
-                Console.WriteLine(mensagemGato);
+            // Mensagem de retorno sobre o cadastro
+            Console.WriteLine(mensagemGato);
         }
     }
 }

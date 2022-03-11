@@ -8,7 +8,7 @@ namespace Exercicio
 {
     class CadastroGato
     {
-        private static List<CadastroGato> ListaDeGatos = new List<CadastroGato>();
+        public static List<CadastroGato> ListaDeGatos = new List<CadastroGato>();
 
         /// <summary>
         /// Identificação do gato
@@ -52,13 +52,12 @@ namespace Exercicio
         {
             if (novoGato.Nome == string.Empty || novoGato.Idade == 0 || novoGato.Raca == string.Empty)
                 return "É obrigatório informar os dados do gato.";
-
             if (novoGato.NomeDoDono == string.Empty || novoGato.Email == string.Empty || novoGato.CPF == 0 || novoGato.Endereco == string.Empty)
                 return "É obrigatório informar os dados do dono do gato.";
 
             // Adição do gato
             ListaDeGatos.Add(novoGato);
-
+            #region Envio de email
             //// Envio de e-mail
             //var mail = new MailMessage("comunicacao@petstore.com", Email);
             //var client = new SmtpClient
@@ -72,8 +71,9 @@ namespace Exercicio
             //mail.Subject = "Bem vindo a Pet Store";
             //mail.Body = $"Parabéns! Seu Pet {gato.Nome} foi cadastrado com sucesso!";
             //client.Send(mail);
+            #endregion
 
-            return "Gato cadastrado com sucesso!";
+            return $"O cadastro do Gato {novoGato.Nome} foi realizado com sucesso!";
         }
     }
 }
